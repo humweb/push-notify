@@ -1,0 +1,60 @@
+ul.notifications {
+    min-width: 300px;
+}
+
+.notification-details {
+    display: none;
+}
+
+.notification-details.open {
+    display: block;
+}
+
+ul.notifications li .item {
+    display: block;
+    padding: 5px 10px 7px;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+}
+
+ul.notifications li:last-child .item {
+    border-bottom: none;
+}
+
+ul.notifications li .item:hover {
+    background-color: #f3f3f3;
+}
+
+ul.notifications li .item:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+ul.notifications li .item-left {
+    float: left;
+}
+
+ul.notifications li .item-left img,
+ul.notifications li .item-left span.item-info {
+    float: left;
+}
+
+ul.notifications li .item-left span.item-info {
+    margin-left: 10px;
+}
+
+ul.notifications li .item-left span.item-info span {
+    display: block;
+}
+
+ul.notifications li .item-right {
+    float: right;
+}
+
+ul.notifications li button {
+    margin-top: 14px;
+}
