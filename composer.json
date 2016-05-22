@@ -1,0 +1,33 @@
+{
+    "name": "humweb/push-notify",
+    "description": "Pusher PrivateChannel Notifications",
+    "license": "MIT",
+    "keywords": ["laravel", "pusher", "php-pusher-server", "notifications", "notify", "events"],
+    "authors": [
+        {
+            "name": "Ryan Shonfner",
+            "email": "ryun@humboldtweb.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Humweb\\PushNotify\\": "src/"
+        }
+    },
+    "require": {
+        "illuminate/contracts": "5.1.* || 5.2.* || 5.3.*",
+        "illuminate/support": "5.1.* || 5.2.* || 5.3.*",
+        "vinkla/pusher": "^2.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.*",
+        "orchestra/testbench": "~3.0",
+        "mockery/mockery": "^0.9.4",
+        "pusher/pusher-php-server": "^2.3"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Humweb\\PushNotify\\Tests\\": "tests/"
+        }
+    }
+}
