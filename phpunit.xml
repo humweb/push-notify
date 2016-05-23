@@ -24,5 +24,10 @@
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./src</directory>
         </whitelist>
+        <blacklist>
+            <file>./src/Facades/PushAuth.php</file>
+            <file>./src/PushServiceProvider.php</file>
+            <file>./src/Auth.php</file>
+        </blacklist>
     </filter>
 </phpunit>

@@ -57,7 +57,7 @@ class PrivateChannel
      */
     public function fire($event, $payload = [])
     {
-        return $this->pusher->trigger($this->getChannel(), $event, $payload);
+        return $this->pusher->trigger([$this->getChannel()], $event, $payload);
     }
 
 
