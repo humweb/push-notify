@@ -9,6 +9,8 @@ namespace Humweb\PushNotify\Auth;
  */
 class InternalAuth implements AuthUserContract
 {
+    protected $userId;
+
 
     /**
      * InternalAuth constructor.

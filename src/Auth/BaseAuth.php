@@ -11,6 +11,7 @@ class BaseAuth implements AuthUserContract
 {
 
     protected $user;
+    protected $auth;
 
 
     /**
