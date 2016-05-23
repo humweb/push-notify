@@ -3,6 +3,7 @@
 namespace Humweb\PushNotify\Tests;
 
 use Humweb\PushNotify\Auth\BaseAuth;
+use Humweb\PushNotify\Auth\InternalAuth;
 use Humweb\PushNotify\Auth\Sentinel;
 use Humweb\PushNotify\Tests\Stubs\LaravelAuth;
 use Humweb\PushNotify\Tests\Stubs\SentinelAuth;
@@ -12,7 +13,8 @@ class AuthTest extends TestCase
     
     protected $laravel;
     protected $sentinel;
-    
+    protected $internal;
+
     /**
      * Setup the test environment.
      */
@@ -22,6 +24,7 @@ class AuthTest extends TestCase
 
         $this->laravel = new BaseAuth(new LaravelAuth());
         $this->sentinel = new Sentinel(new SentinelAuth());
+        $this->internal = new InternalAuth(123);
     }
     
     /**
@@ -31,7 +34,8 @@ class AuthTest extends TestCase
     {
         $this->assertEquals(true, $this->laravel->check());
         $this->assertEquals(true, $this->sentinel->check());
-    }  
+        $this->assertEquals(true, $this->internal->check());
+    }
 
     /**
      * @test
@@ -40,17 +44,6 @@ class AuthTest extends TestCase
     {
         $this->assertEquals(123, $this->laravel->userId());
         $this->assertEquals(123, $this->sentinel->userId());
-    }  
-    
-    /**
-     * @test
-     */
-    public function it_returns_users_id()
-    {
-        $this->assertEquals(123, $this->laravel->userId());
-        $this->assertEquals(123, $this->sentinel->userId());
-
-        $this->assertEquals(true, $this->laravel->check());
-        $this->assertEquals(true, $this->sentinel->check());
+        $this->assertEquals(123, $this->internal->userId());
     }
 }
