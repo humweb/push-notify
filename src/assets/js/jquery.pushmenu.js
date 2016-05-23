@@ -171,6 +171,12 @@
       }
     })
   };
+
+  /**
+   * Default pushMenu config
+   *
+   * @type {{countEl: boolean, storageKey: string, template: $.fn.pushMenu.defaults.template}}
+   */
   $.fn.pushMenu.defaults = {
     countEl: false,
     storageKey: '_pushMenuItems',
