@@ -100,7 +100,7 @@ class PrivateChannel
      * @param $channel
      * @param $socketId
      *
-     * @return bool|string
+     * @return string|false
      */
     public function auth($channel, $socketId)
     {
@@ -117,7 +117,7 @@ class PrivateChannel
      *
      * @throws \InvalidArgumentException
      *
-     * @return bool|string
+     * @return string|false
      */
     public function presenceAuth($channel, $socketId, $presenceData = [])
     {
@@ -136,7 +136,7 @@ class PrivateChannel
      * @param       $socketId
      * @param array $presenceData
      *
-     * @return bool|string
+     * @return string|false
      */
     public function presenceOrSocketAuth($channel, $socketId, $presenceData = [])
     {
