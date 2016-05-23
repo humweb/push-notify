@@ -21,7 +21,7 @@ class PushServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('push.auth', function($app) {
+        $this->app->singleton('push.auth', function ($app) {
             return new Auth($app);
         });
     }

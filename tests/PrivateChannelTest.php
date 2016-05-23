@@ -49,6 +49,7 @@ class PrivateChannelTest extends TestCase
         $this->assertTrue($this->laravel->auth('private-notifications-123', 123));
     }
 
+
     /**
      * @test
      */
