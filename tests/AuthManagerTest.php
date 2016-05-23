@@ -30,7 +30,7 @@ class AuthManagerTest extends TestCase
     public function it_creates_laravel_driver()
     {
         $auth = $this->manager->driver('laravel');
-        $this->assertTrue($auth instanceof BaseAuth);
+        $this->assertInstanceOf('Humweb\PushNotify\Auth\BaseAuth', $auth);
 
     }
 
@@ -43,7 +43,7 @@ class AuthManagerTest extends TestCase
         $auth = $this->manager->driver();
 
         $this->assertEquals('laravel', $this->manager->getDefaultDriver());
-        $this->assertTrue($auth instanceof BaseAuth);
+        $this->assertInstanceOf('Humweb\PushNotify\Auth\BaseAuth', $auth);
 
     }
 
@@ -58,7 +58,7 @@ class AuthManagerTest extends TestCase
         });
 
         $auth = $this->manager->driver('sentinel');
-        $this->assertTrue($auth instanceof Sentinel);
+        $this->assertInstanceOf('Humweb\PushNotify\Auth\Sentinel', $auth);
     }
 
 }
